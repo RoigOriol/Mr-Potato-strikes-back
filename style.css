@@ -1,0 +1,56 @@
+body {
+  margin: 10px;
+  padding: 0;
+  font-family: "Arial";
+}
+#pantalla-inicial {
+  margin-top: 800 px;
+  display: flex;
+  justify-content: center;
+}
+h1 {
+  text-align: center;
+}
+
+#instrucciones {
+  margin: 500 px;
+  text-align: center;
+}
+
+#start-btn {
+  color: black;
+  padding: 15px;
+  font-size: 15px;
+  margin-top: 60px;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#game-box {
+  
+  width: 800px;
+  height: 600px;
+
+  position: relative; /* permite posicionar los elementos de forma absoluta dentro del game-box */
+  overflow: hidden; /* previene que los elementos salgan visualmente del game-box*/
+  user-select: none; /* previene que los elementos del game-box sean resaltados al hacer click */
+  
+  background-image: url("../Imagenes/fruteria.jpeg");
+  background-position: center;
+  background-size: cover;
+}
+
+#game-box * {
+  pointer-events: none; /* previene que todos los elementos del game-box sean arrastrados al clickar sobre ellos */
+}
+
+#game-screen,
+#game-over-screen {
+  display: none; /* el elemento desparece temporalmente de la pantalla */
+}

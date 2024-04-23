@@ -1,11 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mr Potato strikes back</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- PANTALLA DE INICIO -->
+
+    <h1 id="titulo">Mr Potato strikes back</h1>
+    <div id="pantalla-inicial">
+      <img src="./Imagenes/mr_Potato.png" width="200" />
+    </div>
+    <div id="instrucciones">
+      <h2>Play instrucctions</h2>
+      <p>Move up and down to collect potatoes</p>
+      <p>Move up and down to dodge tomatoes and broquoli</p>
+      <div>
+        <button id="start-btn">Start</button>
+      </div>
+    </div>
+
+    <!-- PANTALLA DE JUEGO -->
+    <div id="game-screen" class="container">
+     
+
+      <!-- Elementos del juego como puntuación, vidas, etc deberia ir aqui (dentro del game-screen pero fuera del game-box) -->
+
+      <div id="game-box">
+        <!-- Los elementos del juego serán añadidos desde JS con manipulación de DOM -->
+      </div>
+    </div>
+
+    <!-- PANTALLA GAME OVER -->
+    <div id="game-over-screen" class="container">
+      <img src="./Imagenes/gameover.jpg" width="800" alt="logo" />
+    </div>
+
+    <script src="./JS/game.js"></script>
+    <script src="./JS/MR Potato.js"></script>
+    <script src="./JS/brocoli.js"></script>
+    <script src="./JS/patata.js"></script>
+    <script src="./JS/tomate.js"></script>
+    <script src="./JS/main.js"></script>
+  </body>
 </html>
