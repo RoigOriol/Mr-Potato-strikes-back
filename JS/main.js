@@ -14,7 +14,7 @@ const startBtnNode = document.querySelector("#start-btn");
 
 // game box
 const gameBoxNode = document.querySelector("#game-box");
-//let game; //vacío pk no ha iniciado el juego
+let game; //vacío pk no ha iniciado el juego
 
 //* FUNCIONES GLOBALES DE CAMBIO DE ESTADO E INICIO
 function startGame() {
@@ -24,47 +24,35 @@ function startGame() {
   splashScreenNode2.style.display = "none";
   splashScreenNode3.style.display = "none";
   splashScreenNode4.style.display = "none";
+
   //2. mostrar la pantalla del juego
   gameScreenNode.style.display = "flex";
 
   //3. iniciar el juego
- game = new Game();
- console.log("Hola")
- game.start();
- game.iniciarfrecuenciaDePatata()
-  
+  game = new Game();
+  console.log("newgame");
+  game.start();
+  game.iniciarFrecuenciaDePatata();
+  console.log("salepatata");
+  game.iniciarFrecuenciaDeBrocoli();
+  console.log("salebrocoli");
+  game.iniciarFrecuenciaDeTomate();
+  console.log("saletomate");
 }
 
 //* EVENT LISTENERS
 
 startBtnNode.addEventListener("click", startGame);
 //gameBoxNode.addEventListener("ArrowUp", () =>{
-// tenemos que hacer que el poliito salte accediendo a(no podemos acceder directamente a la clase hay que acceder al game.pollito): No la reconoce por temas de scope
-document.addEventListener("keydown",(event) =>{
-  game.MrPotato.moverMrPotato(event)
-})
 
+//document.addEventListener("keydown", (event) => {
+ // game.MrPotato.moverMrPotato(event);
+  //game.MrPotato.jumpEffectMrPotato(event)
 
-
-
-
-
-
-/* *** Event Listeners ***
-// tambien podemos hacer document.addEventListener
-window.addEventListener("keydown", (event) => {
-  // console.log(event.code)
-  // console.log("presionando teclas")
-  if (event.code === "ArrowRight") {
-    // console.log("quiero mover la paleta a la derecha")
-    paddleX += paddleSpeed
-    paddleNode.style.left = `${paddleX}px`
-  } else if (event.code === "ArrowLeft") {
-    // console.log("quiero moverl la paleta a la izquierda")
-    paddleX -= paddleSpeed
-    paddleNode.style.left = `${paddleX}px`
-  }
-
-  //! en nuestro codigo SOLO necesitamos un eventListener keydown. Todas las teclas van aqui mismo
-
-})*/
+  window.addEventListener("keydown",event =>{
+    if (event.key === 'w' || event.key === 'W') {
+  
+    game.MrPotato.movementUpEffect()
+    } else if (event.key === 's' || event.key === 'S'){
+        game.MrPotato.movementDownEffect()
+      }})
