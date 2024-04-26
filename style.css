@@ -1,35 +1,68 @@
 body {
-  margin: 10px;
-  padding: 0;
   font-family: "Arial";
-  background-image: url("./Imagenes/portada.jpg");
-  background-size: center;
+}
+
+#img-fondo {
+  height: 800px;
+  background-image: url("./Imagenes/portada 2.jpg");
+  background-size: 100% auto;
+  background-image: cover;
   background-repeat: no-repeat;
-  
-}
-#pantalla-inicial {
-
-  padding:200px;
- 
-}
-h1 {
-  text-align: center;
-  font-size: 40px;
+  margin: 0;
 }
 
-#instrucciones {
-  margin: 800px;
-  text-align: center;
+#div-btn {
+  margin-top: 20px;
+  margin-left: 150px;
+}
+.quote {
+  margin-left: 20px;
+}
+h2 {
+  margin-left: 20px;
+}
+
+#header {
+  padding-top: 400px;
+  padding-left: 30px;
+  display: flex;
+  flex-direction: column;
 }
 
 #start-btn {
-  background-color: black;
-  color: white;
-  padding: 15px;
-  font-size: 15px;
-  margin-top: 60px;
   text-align: center;
+  background-color: rgb(13, 49, 229);
+  font-size: 20px;
+  color: white;
+  padding: 10px;
   border-radius: 10px;
+  width: 80px;
+  height: 120;
+  border: 0px;
+  font-weight: bold;
+}
+#counter-btn {
+  text-align: center;
+  background-color: rgb(13, 49, 229);
+  font-size: 20px;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: bold;
+  border: 0px;
+  margin-bottom: 20px;
+}
+
+#restart-btn {
+  text-align: center;
+  background-color: rgb(13, 49, 229);
+  font-size: 18px;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 625px;
+  border: 0px;
+  font-weight: bold;
 }
 
 .container {
@@ -37,32 +70,34 @@ h1 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  
-
- 
 }
 
 #game-box {
-  
   width: 1227px;
-  height: 733px;
- /* padding-left:30px;
-  padding-bottom: 30px;*/
-  position: relative; /* permite posicionar los elementos de forma absoluta dentro del game-box */
-  overflow: hidden; /* previene que los elementos salgan visualmente del game-box*/
-  user-select: none; /* previene que los elementos del game-box sean resaltados al hacer click */
-  
+  height: 700px;
+  position: relative;
+  overflow: hidden;
+  user-select: none;
   background-image: url("../Imagenes/fruteria.jpeg");
   background-position: center;
   background-size: cover;
-  
 }
 
 #game-box * {
-  pointer-events: none; /* previene que todos los elementos del game-box sean arrastrados al clickar sobre ellos */
+  pointer-events: none;
 }
 
-#game-screen,
-#game-over-screen {
-  display: none; /* el elemento desparece temporalmente de la pantalla */
+#game-screen {
+  display: none;
 }
+#game-over-screen {
+  display: none;
+  height: 800px;
+  background-image: url("./Imagenes/game-over2.jpg");
+  background-size: 100% auto;
+  background-image: cover;
+  background-repeat: no-repeat;
+}
+
+/*https://developer.mozilla.org/en-US/docs/Web/API/HTMLAudioElement/Audio
+//https://www.w3schools.com/jsref/dom_obj_audio.asp*/

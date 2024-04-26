@@ -7,31 +7,60 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <!-- PANTALLA DE INICIO -->
+    <div id="img-fondo">
+      <header id="header">
+        <h2>Game instructions</h2>
+        <aside class="quote">
+          <i
+            >Move
+            <span>
+              <img src="./Imagenes/arrow-up.png" alt="arrow logo" width="20px"
+            /></span>
+            and
+            <span>
+              <img
+                src="./Imagenes/arrow-down.png"
+                alt="arrow logo"
+                width="20px"
+            /></span>
+            to collect potatoes</i
+          >
+          <p>
+            <i
+              >Move
+              <span>
+                <img
+                  src="./Imagenes/arrow-up.png"
+                  alt="arrow logo"
+                  width="20px"
+              /></span>
+              and
+              <span>
+                <img
+                  src="./Imagenes/arrow-down.png"
+                  alt="arrow logo"
+                  width="20px"
+              /></span>
+              to dodge tomatoes and broccoli</i
+            >
+          </p>
+        </aside>
 
-    <h1 id="titulo">Mr Potato strikes back</h1>
-    <div id="pantalla-inicial"></div>
-    <div id="instrucciones">
-      <h2>Play instrucctions</h2>
-      <p>Move up and down to collect potatoes</p>
-      <p>Move up and down to dodge tomatoes and broquoli</p>
-      <div>
-        <button id="start-btn">Start</button>
-      </div>
+        <div id="div-btn">
+          <button id="start-btn">Play</button>
+        </div>
+      </header>
     </div>
 
-    <!-- PANTALLA DE JUEGO -->
     <div id="game-screen" class="container">
-      <!-- Elementos del juego como puntuación, vidas, etc deberia ir aqui (dentro del game-screen pero fuera del game-box) -->
-
-      <div id="game-box">
-        <!-- Los elementos del juego serán añadidos desde JS con manipulación de DOM -->
-      </div>
+      <button id="counter-btn">Score 0</button>
+      <div id="game-box"></div>
     </div>
 
-    <!-- PANTALLA GAME OVER -->
     <div id="game-over-screen" class="container">
-      <img src="./Imagenes/gameover.jpg" width="800" alt="logo" />
+      <div>
+        <button id="restart-btn">Restart</button>
+      </div>
     </div>
 
     <script src="./JS/game.js"></script>
@@ -40,5 +69,6 @@
     <script src="./JS/patata.js"></script>
     <script src="./JS/tomate.js"></script>
     <script src="./JS/main.js"></script>
+    <script src="./JS/destello.js"></script>
   </body>
 </html>

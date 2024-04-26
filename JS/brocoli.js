@@ -1,5 +1,5 @@
 class brocoli {
-  constructor(PosY ){
+  constructor(PosY) {
     this.node = document.createElement("img");
     this.node.id = "brocoli";
     this.node.src = "./Imagenes/Brocoli.png";
@@ -11,7 +11,7 @@ class brocoli {
     this.w = 50;
     this.h = 50;
 
-    this.node.style.position = "absolute"; // necesitamos primero posicionarlo de forma absoluta
+    this.node.style.position = "absolute";
     this.node.style.top = `${this.y}px`;
     this.node.style.left = `${this.x}px`;
     this.node.style.width = `${this.w}px`;

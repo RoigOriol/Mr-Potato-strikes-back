@@ -1,29 +1,28 @@
+let score = 0;
+
 class Game {
   constructor() {
     this.MrPotato = new MrPotato();
-    //this.patata = new patata();
-    this.patataArr = [];
-   // this.brocoli = new brocoli();
-    this.brocoliArr = [];
-   // this.tomate = new tomate();
-    this.tomateArr = [];
 
-    //ids de intervalos
+    this.patataArr = [];
+
+    this.brocoliArr = [];
+
+    this.tomateArr = [];
+    this.destello = new destello();
 
     this.gameIntervalId;
     this.patataIntervalId;
     this.brocoliIntervalId;
     this.tomateIntervalId;
+    this.scoreIntervalId;
   }
 
-  //METODOS /ACCIONES
-
-  //PATATA
   patataAparece() {
-    let randomPosY = Math.floor(Math.random() * 600); // nos da el valor aleatorio de la salida en altura de las patatas
+    let randomPosY = Math.floor(Math.random() * 600);
 
-    let nuevaPatata = new patata(randomPosY); // este valor 0 viene determinado por el cambio en la class
-    this.patataArr.push(nuevaPatata); //añadimos la patata
+    let nuevaPatata = new patata(randomPosY);
+    this.patataArr.push(nuevaPatata);
 
     console.log("patata");
   }
@@ -33,53 +32,55 @@ class Game {
       this.patataAparece();
     }, 2000);
   }
+
   eliminarPatataiAlSalirDeLaPantalla() {
     this.patataArr.forEach((cadaPatata, index) => {
       if (cadaPatata.x + cadaPatata.w < 0) {
-        //al eliminar elementos del juego debo de considerar dos cosas: 1 debo eliminar el objeto ()o eliminarlo del array.
-        this.patataArr.splice(index, 1); //remueve ese elemento del array
-        //2. Debo eliminar el nodo del DOM img
+        this.patataArr.splice(index, 1);
+
         cadaPatata.node.remove();
       }
     });
   }
 
+  eliminarPatataAlChocarMrPotato() {
+    this.patataArr.forEach((cadaPatata, index) => {
+      if (cadaPatata.x + cadaPatata.w < 0) {
+        this.patataArr.splice(index, 1);
 
-  //BROCOLI
+        cadaPatata.node.remove();
+      }
+    });
+  }
 
   brocoliAparece() {
-    let randomPosY = Math.floor(Math.random() * 600); // nos da el valor aleatorio de la salida en altura del brocoli
-
-    let nuevaBrocoli = new brocoli(randomPosY); // este valor 0 viene determinado por el cambio en la class
-    this.brocoliArr.push(nuevaBrocoli); //añadimos el brocoli
+    let randomPosY = Math.floor(Math.random() * 600);
+    let nuevaBrocoli = new brocoli(randomPosY);
+    this.brocoliArr.push(nuevaBrocoli);
     console.log("brocoli");
   }
 
   iniciarFrecuenciaDeBrocoli() {
     this.brocoliIntervalId = setInterval(() => {
       this.brocoliAparece();
-    }, 5000);
+    }, 3000);
   }
-  //efecto de que el brocoli desaparece
+
   eliminarBrocoliAlSalirDeLaPantalla() {
     this.brocoliArr.forEach((cadaBrocoli, index) => {
       if (cadaBrocoli.x + cadaBrocoli.w < 0) {
-        //al eliminar elementos del juego debo de considerar dos cosas: 1 debo eliminar el objeto ()o eliminarlo del array.
-        this.brocoliArr.splice(index, 1); //remueve ese elemento del array
-        //2. Debo eliminar el nodo del DOM img
+        this.brocoliArr.splice(index, 1);
+
         cadaBrocoli.node.remove();
       }
     });
   }
 
-  //TOMATE
-
   tomateAparece() {
-    let randomPosY = Math.floor(Math.random() * 600); // nos da el valor aleatorio de la salida en altura de las patatas
+    let randomPosY = Math.floor(Math.random() * 600);
 
-    //las tomates van a aparecer de 2 en 2/
-    let nuevaTomate1 = new tomate(randomPosY); // este valor 0 viene determinado por el cambio en la class
-    this.tomateArr.push(nuevaTomate1); //añadimos el tomate
+    let nuevaTomate1 = new tomate(randomPosY);
+    this.tomateArr.push(nuevaTomate1);
     console.log("tomate");
   }
 
@@ -88,111 +89,104 @@ class Game {
       this.tomateAparece();
     }, 4000);
   }
-  //efecto de que el tomate desaparece
+
   eliminarTomateAlSalirDeLaPantalla() {
     this.tomateArr.forEach((cadaTomate, index) => {
       if (cadaTomate.x + cadaTomate.w < 0) {
-        //al eliminar elementos del juego debo de considerar dos cosas: 1 debo eliminar el objeto ()o eliminarlo del array.
-        this.tomateArr.splice(index, 1); //remueve ese elemento del array
-        //2. Debo eliminar el nodo del DOM img
+        this.tomateArr.splice(index, 1);
+
         cadaTomate.node.remove();
       }
     });
   }
 
+  scoreFunction() {
+    score++;
+    console.log("suma puntos");
+    document.querySelector("#counter-btn").innerHTML = `${"Score: "}` + score;
+  }
 
   colisionMrPotatoPatata() {
     this.patataArr.forEach((cadaPatata) => {
-      
       if (
+        !cadaPatata.tocaMrPotato &&
         this.MrPotato.x < cadaPatata.x + cadaPatata.w &&
         this.MrPotato.x + this.MrPotato.w > cadaPatata.x &&
         this.MrPotato.y < cadaPatata.y + cadaPatata.h &&
         this.MrPotato.y + this.MrPotato.h > cadaPatata.y
       ) {
-        // Collision detected!
-        console.log("choque patata");
-        this.gameOver(); //invocar función de game over
+        cadaPatata.tocaMrPotato = true;
+        cadaPatata.node.remove();
+        this.destello.node.style.visibility = "visible";
+        setTimeout(() => {
+          this.destello.node.style.visibility = "hidden";
+        }, 1000);
+        this.scoreFunction();
+        setTimeout(() => {
+          this.destello.node.style.visibility = "hidden";
+        }, 1000);
       }
     });
   }
+
   colisionMrPotatoBrocoli() {
     this.brocoliArr.forEach((cadaBrocoli) => {
-      
       if (
         this.MrPotato.x < cadaBrocoli.x + cadaBrocoli.w &&
         this.MrPotato.x + this.MrPotato.w > cadaBrocoli.x &&
         this.MrPotato.y < cadaBrocoli.y + cadaBrocoli.h &&
         this.MrPotato.y + this.MrPotato.h > cadaBrocoli.y
       ) {
-        // Collision detected!
-        console.log("choque brocoli");
-        this.gameOver(); //invocar función de game over
+        this.gameOver();
       }
     });
   }
 
-colisionTomateMrPotato(){
-   this.tomateArr.forEach((cadaTomate) => {
-      
+  colisionTomateMrPotato() {
+    this.tomateArr.forEach((cadaTomate) => {
       if (
         this.MrPotato.x < cadaTomate.x + cadaTomate.w &&
-        this.MrPotato.x + this.MrPotato.w > cadaBrocoli.x &&
+        this.MrPotato.x + this.MrPotato.w > cadaTomate.x &&
         this.MrPotato.y < cadaTomate.y + cadaTomate.h &&
         this.MrPotato.y + this.MrPotato.h > cadaTomate.y
       ) {
-        // Collision detected!
         console.log("choque tomate");
-        this.gameOver(); //invocar función de game over
+        this.gameOver();
       }
     });
   }
-}
+  gameLoop() {
+    this.patataArr.forEach((cadaPatata) => {
+      cadaPatata.automaticMovementEffectPatata();
+    });
 
-//funcionPuntos(){}
-
-/*
-gameLoop() {
-  //this.patata.automaticMovementEffectPatata();
-  this.patataArr.forEach((cadaPatata) => {
-    cadaPatata.automaticMovementEffectPatata();
-  });
-   //this.brocoli.automaticMovementEffectBrocoli();
     this.brocoliArr.forEach((cadaBrocoli) => {
       cadaBrocoli.automaticMovementEffectBrocoli();
     });
-     // this.tomate.automaticMovementEffectTomate();
-      this.tomateArr.forEach((cadaTomate) => {
-        cadaTomate.automaticMovementEffectTomate();
-  });
-  this.colisionMrPotatoPatata()
-  this.colisionMrPotatoBrocoli()
-  this.colisionTomateMrPotato()
+
+    this.tomateArr.forEach((cadaTomate) => {
+      cadaTomate.automaticMovementEffectTomate();
+    });
+    this.colisionMrPotatoPatata();
+    this.colisionMrPotatoBrocoli();
+    this.colisionTomateMrPotato();
   }
 
-
-  // GAME OVER
   gameOver() {
-    //1. todos los intervalos deberian detenerse
     clearInterval(this.gameIntervalId);
     clearInterval(this.patataIntervalId);
     clearInterval(this.brocoliIntervalId);
     clearInterval(this.tomateIntervalId);
-    //2. ocultar la pantalla de juego
-    gameScreenNode.style.display = "none";
 
-    //3. mostrar la pantalla final
+    gameScreenNode.style.display = "none";
 
     gameOverScreenNode.style.display = "flex";
   }
 
-
-
   start() {
-
     this.gameIntervalId = setInterval(() => {
       this.gameLoop();
       console.log("juego andando");
-    }, Math.round(1000 / 60)); //60 fps
+    }, Math.round(1000 / 60));
   }
-*/
+}
