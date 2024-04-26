@@ -20,6 +20,9 @@ class tomate {
 
     this.speed = 0.9;
   }
+
+//METODOS
+
   automaticMovementEffectTomate() {
     this.x -= this.speed;
     this.node.style.left = `${this.x}px`;

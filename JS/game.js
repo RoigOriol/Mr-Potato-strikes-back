@@ -17,6 +17,10 @@ class Game {
     this.tomateIntervalId;
     this.scoreIntervalId;
   }
+ //METODOS-ACCIONES
+
+
+// Funciones que afectan al objeto patata
 
   patataAparece() {
     let randomPosY = Math.floor(Math.random() * 600);
@@ -53,6 +57,8 @@ class Game {
     });
   }
 
+// Funciones que afectan al objeto brocoli
+
   brocoliAparece() {
     let randomPosY = Math.floor(Math.random() * 600);
     let nuevaBrocoli = new brocoli(randomPosY);
@@ -75,6 +81,8 @@ class Game {
       }
     });
   }
+
+// Funciones que afectan al objeto tomate
 
   tomateAparece() {
     let randomPosY = Math.floor(Math.random() * 600);

@@ -12,6 +12,8 @@ const restartBtnNode = document.querySelector("#restart-btn");
 const gameBoxNode = document.querySelector("#game-box");
 let game;
 
+
+//* FUNCIONES GLOBALES DE CAMBIO DE ESTADO E INICIO
 function startGame() {
   console.log("iniciando el juego");
 
@@ -32,6 +34,8 @@ function startGame() {
   game.iniciarFrecuenciaDeTomate();
   console.log("saletomate");
 }
+
+//* EVENT LISTENERS
 
 startBtnNode.addEventListener("click", startGame);
 restartBtnNode.addEventListener("click", () => {

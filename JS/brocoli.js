@@ -19,6 +19,8 @@ class brocoli {
 
     this.speed = 0.5;
   }
+
+  //METODOS
   automaticMovementEffectBrocoli() {
     this.x -= this.speed;
     this.node.style.left = `${this.x}px`;

@@ -19,6 +19,8 @@ class patata {
 
     this.speed = 2;
   }
+
+  //METODOS
   automaticMovementEffectPatata() {
     this.x -= this.speed;
     this.node.style.left = `${this.x}px`;

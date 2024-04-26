@@ -19,7 +19,8 @@ class MrPotato {
     this.node.style.width = `${this.w}px`;
     this.node.style.height = `${this.h}px`;
   }
-
+  
+//METODOS
   movementUpEffect() {
     if (this.y > 0) {
       this.y -= this.movementSpeed;
