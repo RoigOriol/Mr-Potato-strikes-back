@@ -1,20 +1,20 @@
-#Mr. Potato strikes back.
+# Mr. Potato strikes back.
 ## [Play the Game!](https://roigoriol.github.io/Mr-Potato-strikes-back/)
 ![Game Logo](https://ibb.co/HrsW2nQ)
 
 
 
-##Descripción
+## Descripción
 Mr. Potato strikes back es un juego en el que el personaje en un ataque de canibalismo, y mucha hambre, debe comerse todas las patatas que aparecen para  conseguir puntos. 
 Debe evitar el choque con tomates y brócolis, ya que no son de su misma especie. A medida que se recolectan las patatas la puntuación se incrementa. 
 El juego finaliza cuando el personaje entra en contacto con las demás hortalizas.
 
 
-##Principales funcionalidades
+## Principales funcionalidades
 - El personaje se mueve arriba y abajo pulsando las teclas de flecha arriba y flecha abajo del teclado.
 - El personaje tiene que ir esquivando las hortalizas que no quiere comerse.
 
-##Funcionalidades del trabajo pendiente
+## Funcionalidades del trabajo pendiente
 - Añadir nuevos movimientos al personaje: que pueda moverse en dirección horizontal y vertical.
 - Incremenetar la velocidad de aparición de las hortalizas para aumentar la dificultad cada cierto tiempo.
 - Añadir diferentes pantallas a medida que se sube de nivel.
@@ -22,7 +22,7 @@ El juego finaliza cuando el personaje entra en contacto con las demás hortaliza
 - Añadir sonido ambiental y efectos de sonido al chocar con las diferentes hortalizas.
 - Que el destello aparezca siempre al lado del personaje cuando come una patata.
 
-##Tecnologías utilizadas
+## Tecnologías utilizadas
 - HTML
 - CSS
 - javascript
@@ -32,12 +32,12 @@ El juego finaliza cuando el personaje entra en contacto con las demás hortaliza
 - Almacenamiento local
 - JS Imagen
 
-##Pantallas
+## Pantallas
 - Pantalla de inicio
 - Pantalla de juego
 - Pantalla de juego terminado
 
-##Estructura del proyecto
+## Estructura del proyecto
 - buildDom();
 - main();
 - createSplashScreen();
@@ -49,7 +49,7 @@ El juego finaliza cuando el personaje entra en contacto con las demás hortaliza
 - startGame();
 - gameOver();
 
-### Slides
+## Slides
 
 [Link](https://docs.google.com/presentation/d/1MkRL8QjZGDNA9ZPebM9FXmWnRz_UTpD-rj3pJ53nWMk/edit#slide=id.g6e29787ded_0_713)
 
