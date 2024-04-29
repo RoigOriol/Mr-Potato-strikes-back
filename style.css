@@ -78,7 +78,7 @@ h2 {
   position: relative;
   overflow: hidden;
   user-select: none;
-  background-image: url("../Imagenes/fruteria.jpeg");
+  background-image: url("./Imagenes/fruteria.jpeg");
   background-position: center;
   background-size: cover;
 }

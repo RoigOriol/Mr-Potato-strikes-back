@@ -1,7 +1,6 @@
 //* ELEMENTOS DE DOM Y VARIABLES GLOBALES
 
 const splashScreenNode = document.querySelector("#header");
-
 const splashScreenNode3 = document.querySelector("#img-fondo");
 const gameScreenNode = document.querySelector("#game-screen");
 const gameOverScreenNode = document.querySelector("#game-over-screen");
