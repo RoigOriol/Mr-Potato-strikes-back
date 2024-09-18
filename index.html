@@ -3,69 +3,79 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mr Potato strikes back</title>
+    <title>Mr. Potato strikes back</title>
+    <!-- Enlace al archivo de estilos CSS -->
     <link rel="stylesheet" href="./style.css" />
+    <!-- Preconexión para mejorar el rendimiento de la carga de fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Enlace a la fuente de Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-     <!-- PANTALLA DE INICIO -->
+    <!-- PANTALLA DE INICIO -->
     <div id="img-fondo">
       <header id="header">
-        <h2>Game instructions</h2>
+        <img src="./Imagenes/title.png" width="55%" alt="Game Title" />
+      </header>
+        <h1>Game instructions</h1>
         <aside class="quote">
-          <i
-            >Move
+          <p>
+            Move
             <span>
-              <img src="./Imagenes/arrow-up.png" alt="arrow logo" width="20px"
-            /></span>
+              <img src="./Imagenes/arrow-up.png" alt="arrow up" width="20px" />
+            </span>
             and
             <span>
               <img
                 src="./Imagenes/arrow-down.png"
-                alt="arrow logo"
+                alt="arrow down"
                 width="20px"
-            /></span>
-            to collect potatoes</i
-          >
+              />
+            </span>
+            to collect potatoes
+          </p>
           <p>
-            <i
-              >Move
-              <span>
-                <img
-                  src="./Imagenes/arrow-up.png"
-                  alt="arrow logo"
-                  width="20px"
-              /></span>
-              and
-              <span>
-                <img
-                  src="./Imagenes/arrow-down.png"
-                  alt="arrow logo"
-                  width="20px"
-              /></span>
-              to dodge tomatoes and broccoli</i
-            >
+            Move
+            <span>
+              <img src="./Imagenes/arrow-up.png" alt="arrow up" width="20px" />
+            </span>
+            and
+            <span>
+              <img
+                src="./Imagenes/arrow-down.png"
+                alt="arrow down"
+                width="20px"
+              />
+            </span>
+            to dodge tomatoes and broccoli
           </p>
         </aside>
-
         <div id="div-btn">
           <button id="start-btn">Play</button>
         </div>
-      </header>
+      
     </div>
 
-     <!-- PANTALLA DE JUEGO -->
-
+    <!-- PANTALLA DE JUEGO -->
     <div id="game-screen" class="container">
       <button id="counter-btn">Score 0</button>
       <div id="game-box"></div>
     </div>
+
     <!-- PANTALLA GAME OVER -->
     <div id="game-over-screen" class="container">
-      <div>
-        <button id="restart-btn">Restart</button>
+
+      </header><img src="./Imagenes/game-over.png" width="40%" alt="Game Over" />
+      </header>
+      <div >       <button id="restart-btn">Restart</button>
       </div>
     </div>
 
+    <!-- Inclusión de scripts JavaScript -->
     <script src="./JS/game.js"></script>
     <script src="./JS/MR Potato.js"></script>
     <script src="./JS/brocoli.js"></script>

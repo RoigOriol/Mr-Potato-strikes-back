@@ -2,7 +2,7 @@ class score {
   constructor() {
     this.node = document.createElement("img");
     this.node.id = "score";
-    this.node.src = "./Imagenes/mr_Potato.png";
+    this.node.src = "./Imagenes/Mr_Potato.png";
     this.node.alt = "test";
     gameBoxNode.append(this.node);
 

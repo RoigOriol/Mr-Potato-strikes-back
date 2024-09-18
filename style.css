@@ -1,70 +1,73 @@
 body {
-  font-family: "Arial";
+  font-family: "Silkscreen", sans-serif;
+  background-color: yellow;
+  text-align: center;
 }
-
-#img-fondo {
-  height: 800px;
-  background-image: url("./Imagenes/portada 2.jpg");
-  background-size: 100% auto;
-  background-image: cover;
-  background-repeat: no-repeat;
-  margin: 0;
+#header {
+  padding-top: 50px;
+  text-align: center;
 }
 
 #div-btn {
-  margin-top: 20px;
-  margin-left: 150px;
+  margin-top: 40px;
 }
 .quote {
-  margin-left: 20px;
-}
-h2 {
-  margin-left: 20px;
+  margin-top: 20px;
+  text-align: center;
+  font-size: 30px;
 }
 
-#header {
-  padding-top: 400px;
-  padding-left: 30px;
-  display: flex;
-  flex-direction: column;
+h1 {
+  margin-top: 80px;
+  text-align: center;
 }
 
 #start-btn {
   text-align: center;
-  background-color: rgb(13, 49, 229);
+  background-color: #00aaff;
   font-size: 20px;
   color: white;
   padding: 10px;
   border-radius: 10px;
-  width: 80px;
-  height: 120;
-  border: 0px;
+  border: 4px;
+  border-color: #0040e0;
+  border-style: solid;
   font-weight: bold;
+  font-family: "Silkscreen", sans-serif;
+  margin-top: 40px;
+  margin-bottom: 10px;
 }
 #counter-btn {
   text-align: center;
-  background-color: rgb(13, 49, 229);
+  background-color: #00aaff;
   font-size: 20px;
   color: white;
   padding: 10px;
   border-radius: 10px;
+  border: 4px;
+  border-style: solid;
+  border-color: #0040e0;
   font-weight: bold;
-  border: 0px;
+  font-family: "Silkscreen", sans-serif;
+  margin-top: 10px;
   margin-bottom: 20px;
 }
 
 #restart-btn {
   text-align: center;
-  background-color: rgb(13, 49, 229);
-  font-size: 18px;
+  background-color: #00aaff;
+  font-size: 20px;
   color: white;
   padding: 10px;
   border-radius: 10px;
-  margin-top: 625px;
-  border: 0px;
+  border: 4px;
+  border-style: solid;
+  border-color: #0040e0;
   font-weight: bold;
-}
+  font-family: "Silkscreen", sans-serif;
+  margin-top: 60px;
 
+}
 .container {
   display: flex;
   flex-direction: column;
@@ -74,11 +77,11 @@ h2 {
 
 #game-box {
   width: 1227px;
-  height: 700px;
+  height: 735px;
   position: relative;
   overflow: hidden;
   user-select: none;
-  background-image: url("./Imagenes/fruteria.jpeg");
+  background-image: url("./Imagenes/fruteria.png");
   background-position: center;
   background-size: cover;
 }
@@ -91,12 +94,7 @@ h2 {
   display: none;
 }
 #game-over-screen {
+  margin-top: 100px;
   display: none;
-  height: 800px;
-  background-image: url("./Imagenes/game-over2.jpg");
-  background-size: 100% auto;
-  background-image: cover;
-  background-repeat: no-repeat;
+  background-color: yellow;
 }
-
-
