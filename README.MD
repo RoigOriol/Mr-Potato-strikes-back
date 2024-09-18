@@ -1,6 +1,6 @@
 # Mr. Potato strikes back.
 ## [Play the Game!](https://roigoriol.github.io/Mr-Potato-strikes-back/)
-![Game Logo](https://ibb.co/HrsW2nQ)
+![Game Logo](https://ibb.co/Bqrd6TC)
 
 
 
