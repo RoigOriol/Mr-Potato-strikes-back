@@ -34,15 +34,15 @@ class MrPotato {
     }
   }
   movementRightEffect() {
-    if (this.y + this.h < 650) {
-      this.y += this.movementSpeed;
-      this.node.style.top = `${this.y}px`;
+    if (this.x + this.w < 1227) {  // Asumiendo que 650 es el límite derecho
+      this.x += this.movementSpeed;
+      this.node.style.left = `${this.x}px`;  // Actualiza la posición horizontal
     }
   }
   movementLeftEffect() {
-    if (this.y + this.h < 650) {
-      this.y += this.movementSpeed;
-      this.node.style.top = `${this.y}px`;
+    if (this.x > 0) {
+      this.x -= this.movementSpeed;
+      this.node.style.left = `${this.x}px`;  // Actualiza la posición horizontal
     }
   }
 }

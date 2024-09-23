@@ -167,8 +167,7 @@ class Game {
           }
       });
   }
-  
-  
+    
 
   colisionMrPotatoBrocoli() {
     this.brocoliArr.forEach((cadaBrocoli) => {

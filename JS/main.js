@@ -43,8 +43,12 @@ restartBtnNode.addEventListener("click", () => {
 
 window.addEventListener("keydown", (event) => {
   if (event.key === "ArrowUp") {
-    game.MrPotato.movementUpEffect();
+    game.MrPotato.movementUpEffect(); 
   } else if (event.key === "ArrowDown") {
-    game.MrPotato.movementDownEffect();
+    game.MrPotato.movementDownEffect(); 
+  } else if (event.key === "ArrowLeft") {
+    game.MrPotato.movementLeftEffect();  
+  } else if (event.key === "ArrowRight") {
+    game.MrPotato.movementRightEffect(); 
   }
 });

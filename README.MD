@@ -20,7 +20,7 @@ El juego finaliza cuando el personaje entra en contacto con las demás hortaliza
 - Añadir diferentes pantallas a medida que se sube de nivel.
 - Cambiar las hortalizas en cada nivel diferente.
 - Añadir sonido ambiental y efectos de sonido al chocar con las diferentes hortalizas.
-- Que el destello aparezca siempre al lado del personaje cuando come una patata.
+
 
 ## Tecnologías utilizadas
 - HTML
