@@ -3,7 +3,7 @@ class MrPotato {
     this.node = document.createElement("img");
     this.node.id = "MrPotato";
     this.node.src = "./Imagenes/Mr_Potato.png";
-    this.node.alt = "test";
+    this.node.alt = "Mr_potato";
     gameBoxNode.append(this.node);
 
     this.x = 30;

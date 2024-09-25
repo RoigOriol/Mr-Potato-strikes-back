@@ -3,7 +3,7 @@ class tomate {
     this.node = document.createElement("img");
     this.node.id = "tomate";
     this.node.src = "./Imagenes/Tomate.png";
-    this.node.alt = "test";
+    this.node.alt = "tomate";
     gameBoxNode.append(this.node);
 
     this.x = gameBoxNode.offsetWidth;

@@ -15,7 +15,6 @@ El juego finaliza cuando el personaje entra en contacto con las demás hortaliza
 - El personaje tiene que ir esquivando las hortalizas que no quiere comerse.
 
 ## Funcionalidades del trabajo pendiente
-- Añadir nuevos movimientos al personaje: que pueda moverse en dirección horizontal y vertical.
 - Incremenetar la velocidad de aparición de las hortalizas para aumentar la dificultad cada cierto tiempo.
 - Añadir diferentes pantallas a medida que se sube de nivel.
 - Cambiar las hortalizas en cada nivel diferente.
@@ -35,7 +34,7 @@ El juego finaliza cuando el personaje entra en contacto con las demás hortaliza
 ## Pantallas
 - Pantalla de inicio
 - Pantalla de juego
-- Pantalla de juego terminado
+- Pantalla de game over
 
 ## Estructura del proyecto
 - buildDom();

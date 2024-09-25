@@ -3,7 +3,7 @@ class patata {
     this.node = document.createElement("img");
     this.node.id = "patata";
     this.node.src = "./Imagenes/patata.png";
-    this.node.alt = "test";
+    this.node.alt = "patata";
     gameBoxNode.append(this.node);
 
     this.x = gameBoxNode.offsetWidth;

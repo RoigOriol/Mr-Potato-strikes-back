@@ -3,7 +3,7 @@ class destello {
     this.node = document.createElement("img");
     this.node.id = "destello";
     this.node.src = "./Imagenes/destello.png";
-    this.node.alt = "test";
+    this.node.alt = "destello";
     
     gameBoxNode.append(this.node);
 

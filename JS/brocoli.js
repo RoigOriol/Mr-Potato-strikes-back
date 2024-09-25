@@ -3,7 +3,7 @@ class brocoli {
     this.node = document.createElement("img");
     this.node.id = "brocoli";
     this.node.src = "./Imagenes/Brocoli.png";
-    this.node.alt = "test";
+    this.node.alt = "brocoli";
     gameBoxNode.append(this.node);
 
     this.x = gameBoxNode.offsetWidth;
