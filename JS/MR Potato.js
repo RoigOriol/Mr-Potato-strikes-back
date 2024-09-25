@@ -2,8 +2,8 @@ class MrPotato {
   constructor() {
     this.node = document.createElement("img");
     this.node.id = "MrPotato";
-    this.node.src = "./Imagenes/Mr_Potato.png";
-    this.node.alt = "Mr_potato";
+    this.node.src = "./Imagenes/MrPotato.png";
+    this.node.alt = "Mrpotato";
     gameBoxNode.append(this.node);
 
     this.x = 30;
