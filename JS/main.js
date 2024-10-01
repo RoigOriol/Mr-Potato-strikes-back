@@ -22,7 +22,7 @@ function startGame() {
   gameScreenNode.style.display = "flex"; // Mostrar pantalla de juego
 
   //3. iniciar el juego
-  game = new Game(); // Asegúrate que `Game` esté correctamente definido y cargado
+  game = new Game(); 
   console.log("newgame");
   game.start();
   game.iniciarFrecuenciaDePatata();
@@ -43,7 +43,7 @@ restartBtnNode.addEventListener("click", () => {
 
 // Control de movimiento de Mr. Potato mediante las teclas de flecha
 window.addEventListener("keydown", (event) => {
-  if (game && game.MrPotato) { // Asegurarse de que `game` y `MrPotato` están definidos
+  if (game && game.MrPotato) { 
     if (event.key === "ArrowUp") {
       game.MrPotato.movementUpEffect(); 
     } else if (event.key === "ArrowDown") {
@@ -62,10 +62,10 @@ const audioControl = document.getElementById("audio-control");
 
 audioControl.addEventListener("click", function () {
   if (audio.paused) {
-    audio.play(); // Reproduce el audio
-    audioControl.src = "./Imagenes/pause.png"; // Cambia icono a "pausa"
+    audio.play();
+    audioControl.src = "./Imagenes/pause.png"; 
   } else {
-    audio.pause(); // Pausa el audio
-    audioControl.src = "./Imagenes/play.png"; // Cambia icono a "play"
+    audio.pause();
+    audioControl.src = "./Imagenes/play.png"; 
   }
 });
