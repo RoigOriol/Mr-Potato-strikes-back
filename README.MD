@@ -11,7 +11,7 @@ El juego finaliza cuando el personaje entra en contacto con las demás hortaliza
 
 
 ## Principales funcionalidades
-- El personaje se mueve arriba y abajo pulsando las teclas de flecha arriba y flecha abajo del teclado.
+- El personaje se mueve en vertical y horizontal pulsando las flechas del teclado.
 - El personaje tiene que ir esquivando las hortalizas que no quiere comerse.
 
 ## Funcionalidades del trabajo pendiente

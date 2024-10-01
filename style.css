@@ -3,11 +3,6 @@ body {
   background-color: yellow;
   text-align: center;
 }
-#header {
-  padding-top: 50px;
-  text-align: center;
-}
-
 
 .quote {
   margin-top: 20px;
@@ -19,28 +14,38 @@ h1 {
   margin-top: 60px;
   text-align: center;
 }
-#arrow_keys{
+#arrow_keys {
   margin-top: 20px;
 }
 #start-btn {
   text-align: center;
   background-color: #00aaff;
   font-size: 20px;
-  color: white;
+  color: yellow;
   padding: 10px;
   border-radius: 10px;
   border: 4px;
   border-color: #0040e0;
   border-style: solid;
-  font-weight: bold;
+  font-weight: 400;
   font-family: "Silkscreen", sans-serif;
   margin-bottom: 10px;
+  filter: drop-shadow(0.283px 0.283px 0px #0040c0),
+    drop-shadow(0 0 0.5px #00aaff), drop-shadow(-0.283px -0.283px 0.5px #80ffff),
+    drop-shadow(0.354px 0.354px 0.5px #0040e0),
+    drop-shadow(0.707px 0.707px 0.5px #0040e0),
+    drop-shadow(1.061px 1.061px 0.5px #0040e0),
+    drop-shadow(1.414px 1.414px 0.5px #002080),
+    drop-shadow(1.768px 1.768px 0.5px #002080),
+    drop-shadow(2.121px 2.121px 0.5px #002080),
+    drop-shadow(3.182px 3.182px 0.5px rgba(0, 0, 0, 0.15));
+  box-shadow: inset 2px 2px 0px #ffffff;
 }
 #counter-btn {
   text-align: center;
   background-color: #00aaff;
   font-size: 20px;
-  color: white;
+  color: yellow;
   padding: 10px;
   border-radius: 10px;
   border: 4px;
@@ -50,13 +55,23 @@ h1 {
   font-family: "Silkscreen", sans-serif;
   margin-top: 10px;
   margin-bottom: 20px;
+  filter: drop-shadow(0.283px 0.283px 0px #0040c0),
+  drop-shadow(0 0 0.5px #00aaff), drop-shadow(-0.283px -0.283px 0.5px #80ffff),
+  drop-shadow(0.354px 0.354px 0.5px #0040e0),
+  drop-shadow(0.707px 0.707px 0.5px #0040e0),
+  drop-shadow(1.061px 1.061px 0.5px #0040e0),
+  drop-shadow(1.414px 1.414px 0.5px #002080),
+  drop-shadow(1.768px 1.768px 0.5px #002080),
+  drop-shadow(2.121px 2.121px 0.5px #002080),
+  drop-shadow(3.182px 3.182px 0.5px rgba(0, 0, 0, 0.15));
+box-shadow: inset 2px 2px 0px #ffffff;
 }
 
 #restart-btn {
   text-align: center;
   background-color: #00aaff;
   font-size: 20px;
-  color: white;
+  color: yellow;
   padding: 10px;
   border-radius: 10px;
   border: 4px;
@@ -65,7 +80,16 @@ h1 {
   font-weight: bold;
   font-family: "Silkscreen", sans-serif;
   margin-top: 60px;
-
+  filter: drop-shadow(0.283px 0.283px 0px #0040c0),
+  drop-shadow(0 0 0.5px #00aaff), drop-shadow(-0.283px -0.283px 0.5px #80ffff),
+  drop-shadow(0.354px 0.354px 0.5px #0040e0),
+  drop-shadow(0.707px 0.707px 0.5px #0040e0),
+  drop-shadow(1.061px 1.061px 0.5px #0040e0),
+  drop-shadow(1.414px 1.414px 0.5px #002080),
+  drop-shadow(1.768px 1.768px 0.5px #002080),
+  drop-shadow(2.121px 2.121px 0.5px #002080),
+  drop-shadow(3.182px 3.182px 0.5px rgba(0, 0, 0, 0.15));
+box-shadow: inset 2px 2px 0px #ffffff;
 }
 .container {
   display: flex;
@@ -96,4 +120,22 @@ h1 {
   margin-top: 100px;
   display: none;
   background-color: yellow;
+}
+
+#audio-control-container {
+  position: absolute;
+  top: 5px;
+  right: 50px;
+  padding-top: 10px;
+  text-align: right;
+  z-index: 100;
+}
+
+#audio-control {
+  cursor: pointer;
+}
+
+#header {
+  top: 20px;
+  position: relative;
 }

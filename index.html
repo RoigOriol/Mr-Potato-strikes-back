@@ -4,52 +4,66 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mr. Potato strikes back</title>
-    <!-- Enlace al archivo de estilos CSS -->
+
     <link rel="stylesheet" href="./style.css" />
-    <!-- Preconexión para mejorar el rendimiento de la carga de fuentes -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <!-- Enlace a la fuente de Google Fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap"
       rel="stylesheet"
     />
   </head>
   <body>
+    <!-- CONTROL DE AUDIO GLOBAL -->
+    <figure id="audio-control-container">
+      <img
+        id="audio-control"
+        src="./Imagenes/play.png"
+        width="50px"
+        alt="Play/Pause"
+      />
+      <audio id="audio" src="Audio/La Patata.mp3"></audio>
+    </figure>
+
     <!-- PANTALLA DE INICIO -->
     <div id="img-fondo">
+      <!-- Título del juego -->
       <header id="header">
-        <figure>
-          <audio controls src="Audio/La Patata.mp3"></audio>
-        
-        </figure>
-        
         <img src="./Imagenes/title.png" width="55%" alt="Game Title" />
       </header>
+      <!-- Instrucciones del juego -->
       <h1>Game Instructions</h1>
       <aside class="quote">
         <p>
-          Use the arrow keys to collect potatoes </br>and dodge tomatoes and broccoli.</br>
-          <img id="arrow_keys"src="./Imagenes/arrow_keys.png" width="10%" alt="arrow_keys" />
+          Use the arrow keys to collect potatoes <br />and dodge tomatoes and
+          broccoli.<br />
+          <img
+            id="arrow_keys"
+            src="./Imagenes/arrowKeys.png"
+            width="10%"
+            alt="arrow_keys"
+          />
         </p>
       </aside>
+      <!-- Botón para iniciar el juego -->
       <div>
         <button id="start-btn">Play</button>
       </div>
     </div>
-    
+
     <!-- PANTALLA DE JUEGO -->
     <div id="game-screen" class="container">
+      <!-- Puntaje del juego -->
       <button id="counter-btn">Score 0</button>
       <div id="game-box"></div>
     </div>
 
     <!-- PANTALLA GAME OVER -->
     <div id="game-over-screen" class="container">
-
-      </header><img src="./Imagenes/game-over.png" width="40%" alt="Game Over" />
-      </header>
-      <div >       <button id="restart-btn">Restart</button>
+      <img src="./Imagenes/gameOver.png" width="40%" alt="Game Over" />
+      <div>
+        <!-- Botón para reiniciar el juego -->
+        <button id="restart-btn">Restart</button>
       </div>
     </div>
 

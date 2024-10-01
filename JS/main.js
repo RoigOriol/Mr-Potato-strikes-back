@@ -16,14 +16,13 @@ let game;
 function startGame() {
   console.log("iniciando el juego");
 
-  splashScreenNode.style.display = "none";
+  splashScreenNode.style.display = "none"; // Ocultar pantalla de inicio
+  splashScreenNode3.style.display = "none"; // Ocultar fondo
 
-  splashScreenNode3.style.display = "none";
-
-  gameScreenNode.style.display = "flex";
+  gameScreenNode.style.display = "flex"; // Mostrar pantalla de juego
 
   //3. iniciar el juego
-  game = new Game();
+  game = new Game(); // Asegúrate que `Game` esté correctamente definido y cargado
   console.log("newgame");
   game.start();
   game.iniciarFrecuenciaDePatata();
@@ -36,19 +35,37 @@ function startGame() {
 
 //* EVENT LISTENERS
 
-startBtnNode.addEventListener("click", startGame);
+startBtnNode.addEventListener("click", startGame); // Inicia el juego cuando se pulsa el botón
+
 restartBtnNode.addEventListener("click", () => {
-  window.location.reload();
+  window.location.reload(); // Reinicia la página al pulsar restart
 });
 
+// Control de movimiento de Mr. Potato mediante las teclas de flecha
 window.addEventListener("keydown", (event) => {
-  if (event.key === "ArrowUp") {
-    game.MrPotato.movementUpEffect(); 
-  } else if (event.key === "ArrowDown") {
-    game.MrPotato.movementDownEffect(); 
-  } else if (event.key === "ArrowLeft") {
-    game.MrPotato.movementLeftEffect();  
-  } else if (event.key === "ArrowRight") {
-    game.MrPotato.movementRightEffect(); 
+  if (game && game.MrPotato) { // Asegurarse de que `game` y `MrPotato` están definidos
+    if (event.key === "ArrowUp") {
+      game.MrPotato.movementUpEffect(); 
+    } else if (event.key === "ArrowDown") {
+      game.MrPotato.movementDownEffect(); 
+    } else if (event.key === "ArrowLeft") {
+      game.MrPotato.movementLeftEffect();  
+    } else if (event.key === "ArrowRight") {
+      game.MrPotato.movementRightEffect(); 
+    }
+  }
+});
+
+//* CONTROL DE AUDIO
+const audio = document.getElementById("audio");
+const audioControl = document.getElementById("audio-control");
+
+audioControl.addEventListener("click", function () {
+  if (audio.paused) {
+    audio.play(); // Reproduce el audio
+    audioControl.src = "./Imagenes/pause.png"; // Cambia icono a "pausa"
+  } else {
+    audio.pause(); // Pausa el audio
+    audioControl.src = "./Imagenes/play.png"; // Cambia icono a "play"
   }
 });
